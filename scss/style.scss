@@ -1,0 +1,83 @@
+$bg-color: #000;
+body {
+  background: $bg-color;
+  margin-top: 120px;
+}
+#homePage{
+	.logo img{
+		width: 180px;
+		margin-bottom: 100px;
+	}
+	.page-btn a{
+		width: 80%;
+		padding: 10px;
+		background: #fff;
+		color: #000;
+		font-size: 15px;
+	}
+}
+
+/* Small devices (iphone 6/7/8 iOS 11 phones, 375px and up) */
+@media (min-width: 375px){
+	#homePage{
+	.logo img{
+		width: 180px;
+		margin-bottom: 100px;
+	}
+	.page-btn a{
+		width: 80%;
+		padding: 10px;
+		background: #fff;
+		color: #000;
+		font-size: 15px;
+	}
+}
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px){
+	#homePage{
+	.logo img{
+		width: 200px;
+		margin-bottom: 100px;
+	}
+	.page-btn a{
+		width: 80%;
+		padding: 8px;
+		background: #fff;
+		color: #000;
+		font-size: 18px;
+	}
+}
+}
+/* medium devices (tablet, 768px and up) */
+@media (min-width: 768px){
+	#homePage{
+	.logo img{
+		width: 210px;
+		margin-bottom: 100px;
+	}
+	.page-btn a{
+		width: 80%;
+		padding: 8px;
+		background: #fff;
+		color: #000;
+		font-size: 18px;
+	}
+}
+}
+/* desktops devices (desktops, 992px and up) */
+@media (min-width: 992px){
+	#homePage{
+	.logo img{
+		width: 210px;
+		margin-bottom: 100px;
+	}
+	.page-btn a{
+		width: 80%;
+		padding: 8px;
+		background: #fff;
+		color: #000;
+		font-size: 18px;
+	}
+}
+}

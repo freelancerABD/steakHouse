@@ -1,0 +1,724 @@
+$bg-color: #fff;
+body {
+  background: $bg-color; 
+}
+
+//Radio css style
+
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type='radio'] {
+    --active: #fff;
+    --active-inner: #d27906;
+    --focus: 2px rgba(39, 94, 254, .3);
+    --border: #BBC1E1;
+    --border-hover: #275EFE;
+    --background: #fff;
+    --disabled: #F6F8FF;
+    --disabled-inner: #E1E6F9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 21px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    transition: background .3s, border-color .3s, box-shadow .2s;
+    &:after {
+      content: '';
+      display: block;
+      left: 0;
+      top: 0;
+      position: absolute;
+      transition: transform var(--d-t, .3s) var(--d-t-e, ease), opacity var(--d-o, .2s);
+    }
+    &:checked {
+      --b: var(--active);
+      --bc: var(--active);
+      --d-o: .3s;
+      --d-t: .6s;
+      --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+    }
+    &:disabled {
+      --b: var(--disabled);
+      cursor: not-allowed;
+      opacity: .9;
+      &:checked {
+        --b: var(--disabled-inner);
+        --bc: var(--border);
+      }
+      & + label {
+        cursor: not-allowed;
+      }
+    }
+    &:hover {
+      &:not(:checked) {
+        &:not(:disabled) {
+          --bc: var(--border-hover);
+        }
+      }
+    }
+    &:focus {
+      box-shadow: 0 0 0 var(--focus);
+    }
+    &:not(.switch) {
+      width: 21px;
+      &:after {
+        opacity: var(--o, 0);
+      }
+      &:checked {
+        --o: 1;
+      }
+    }
+    & + label {
+      font-size: 14px;
+      line-height: 21px;
+      display: inline-block;
+      vertical-align: top;
+      cursor: pointer;
+      margin-left: 4px;
+    }
+  }
+
+  input[type='radio'] {
+    border-radius: 50%;
+    &:after {
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      background: var(--active-inner);
+      opacity: 0;
+      transform: scale(var(--s, .7));
+    }
+    &:checked {
+      --s: .7;
+    }
+  }
+}
+
+// Demo
+
+ul {
+  margin: 12px;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  max-width: 320px;
+  li {
+    margin: 16px 0;
+    position: relative;
+  }
+}
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+//pizzaPage css style
+
+#pizzaPage{
+	.header-img{	
+		background: url('../img/shutterstock_-1.png') no-repeat;
+		background-size: cover;
+		min-height: 230px;
+	}
+	span i{
+		margin-top: 60px;
+		margin-left: 5px;
+		color: #fff;
+		font-size: 20px;
+	}
+}
+#pizza-capriccios{
+	border-radius:30px 30px 0px 0px;
+	margin-top: -75px;
+	.header-middle{
+		h4{
+			font-weight: bold;
+		}
+		span{
+			font-size: 35px;
+		}
+		.close{
+			margin-top: -20px;
+		}
+		p{
+			font-size: 12px;
+			color: grey;
+		}
+	}
+	.nav-sections{
+		a{
+			width: 100%;
+			background: #eee;
+		}
+	}
+}
+
+#accordion{
+	.card-1{
+		ul{
+			padding-left: 0px;
+		}
+		li{
+			list-style: none; 
+			padding-bottom: 5px;
+			a{
+				font-size: 16px; 
+				font-weight: bold;
+				color: #000;
+				text-decoration: none;
+				i{ 
+					color: #d27906; 
+					font-size: 20px;
+				}
+			}	
+			
+		}
+		.card-body{
+			margin-left: 20px;
+			.r3 span{
+				color: #d27906; 
+				font-weight: bold; 
+				font-size: 14px;
+				margin-left: 170px;
+			}
+			label{
+				font-weight: bold; font-size: 15px;
+			}
+		}
+		a{
+  			text-decoration: none;
+  		}
+		.pizza{
+				h6{
+					font-weight: bold; 
+					font-size: 13px;
+					color: #000;	
+				}
+				span{
+					font-size: 12px;
+					color: #d27906;
+					font-weight: bold;
+				}
+				p{
+					font-size: 11px; 
+					color: grey;
+				}
+			}
+
+	}
+}
+
+/* Footer css start here */
+#footer{
+	.footer-top{	
+		a{
+			color: #000;
+			background: #fff;
+			border: 1px solid grey;
+			border-radius: 50%;
+			padding: 10px 17px;
+			i{
+				font-size: 10px;
+			}
+		}
+		
+	}
+}
+
+/* Small devices (iphone 6/7/8 iOS 11 phones, 375px and up) */
+@media (min-width: 375px){
+#pizzaPage{
+	.header-img{	
+		background: url('../img/shutterstock_-1.png') no-repeat;
+		background-size: cover;
+		min-height: 230px;
+	}
+	span i{
+		margin-top: 60px;
+		margin-left: 5px;
+		color: #fff;
+		font-size: 20px;
+	}
+}
+#pizza-capriccios{
+	border-radius:30px 30px 0px 0px;
+	margin-top: -75px;
+	.header-middle{
+		h4{
+			font-weight: bold;
+		}
+		span{
+			font-size: 35px;
+		}
+		.close{
+			margin-top: -20px;
+		}
+		p{
+			font-size: 12px;
+			color: grey;
+		}
+	}
+	.nav-sections{
+		a{
+			width: 100%;
+			background: #eee;
+		}
+	}
+}
+
+#accordion{
+	.card-1{
+		ul{
+			padding-left: 0px;
+		}
+		li{
+			list-style: none; 
+			padding-bottom: 5px;
+			a{
+				font-size: 16px; 
+				font-weight: bold;
+				color: #000;
+				text-decoration: none;
+				i{ 
+					color: #d27906; 
+					font-size: 20px;
+				}
+			}	
+			
+		}
+		.card-body{
+			margin-left: 20px;
+			.r3 span{
+				color: #d27906; 
+				font-weight: bold; 
+				font-size: 14px;
+				margin-left: 170px;
+			}
+			label{
+				font-weight: bold; font-size: 15px;
+			}
+		}
+		a{
+  			text-decoration: none;
+  		}
+		.pizza{
+				h6{
+					font-weight: bold; 
+					font-size: 13px;
+					color: #000;	
+				}
+				span{
+					font-size: 12px;
+					color: #d27906;
+					font-weight: bold;
+				}
+				p{
+					font-size: 11px; 
+					color: grey;
+				}
+			}
+
+	}
+}
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px){
+#pizzaPage{
+	.header-img{	
+		background: url('../img/shutterstock_-1.png') no-repeat;
+		background-size: cover;
+		min-height: 240px;
+	}
+	span i{
+		margin-top: 60px;
+		margin-left: 5px;
+		color: #fff;
+		font-size: 20px;
+	}
+}
+#pizza-capriccios{
+	border-radius:30px 30px 0px 0px;
+	margin-top: -75px;
+	.header-middle{
+		h4{
+			font-weight: bold;
+		}
+		span{
+			font-size: 35px;
+		}
+		.close{
+			margin-top: -20px;
+		}
+		p{
+			font-size: 12px;
+			color: grey;
+		}
+	}
+	.nav-sections{
+		a{
+			width: 100%;
+			background: #eee;
+		}
+	}
+}
+
+#accordion{
+	.card-1{
+		ul{
+			padding-left: 12px;
+		}
+		li{
+			list-style: none; 
+			padding-bottom: 5px;
+			a{
+				font-size: 16px; 
+				font-weight: bold;
+				color: #000;
+				text-decoration: none;
+				i{ 
+					color: #d27906; 
+					font-size: 20px;
+				}
+			}	
+			
+		}
+		.card-body{
+			margin-left: 40px;
+			.r3 span{
+				color: #d27906; 
+				font-weight: bold; 
+				font-size: 14px;
+				margin-left: 170px;
+			}
+			label{
+				font-weight: bold; font-size: 15px;
+			}
+		}
+		a{
+  			text-decoration: none;
+  		}
+		.pizza{
+			h6{
+				font-weight: bold; 
+				font-size: 13px;
+				color: #000;	
+			}
+			span{
+				font-size: 12px;
+				color: #d27906;
+				font-weight: bold;
+			}
+			p{
+				font-size: 11px; 
+				color: grey;
+			}
+		}
+
+	}
+}
+
+}
+/* medium devices (tablet, 768px and up) */
+@media (min-width: 768px){
+	#pizzaPage{
+	.header-img{	
+		background: url('../img/shutterstock_-1.png') no-repeat;
+		background-size: cover;
+		min-height: 280px;
+	}
+	span i{
+		margin-top: 60px;
+		margin-left: 5px;
+		color: #fff;
+		font-size: 20px;
+	}
+}
+#pizza-capriccios{
+	border-radius:30px 30px 0px 0px;
+	margin-top: -75px;
+	.header-middle{
+		h4{
+			font-weight: bold;
+		}
+		span{
+			font-size: 35px;
+		}
+		.close{
+			margin-top: -20px;
+		}
+		p{
+			font-size: 12px;
+			color: grey;
+		}
+	}
+	.nav-sections{
+		a{
+			width: 100%;
+			background: #eee;
+		}
+	}
+}
+
+#accordion{
+	.card-1{
+		ul{
+			padding-left: 25px;
+		}
+		li{
+			list-style: none; 
+			padding-bottom: 5px;
+			a{
+				font-size: 16px; 
+				font-weight: bold;
+				color: #000;
+				text-decoration: none;
+				i{ 
+					color: #d27906; 
+					font-size: 20px;
+				}
+			}	
+			
+		}
+		.card-body{
+			margin-left: 40px;
+			.r3 span{
+				color: #d27906; 
+				font-weight: bold; 
+				font-size: 14px;
+				margin-left: 162px;
+			}
+			label{
+				font-weight: bold; font-size: 15px;
+			}
+		}
+		a{
+  			text-decoration: none;
+  		}
+		.pizza{
+			h6{
+				font-weight: bold; 
+				font-size: 13px;
+				color: #000;	
+			}
+			span{
+				font-size: 12px;
+				color: #d27906;
+				font-weight: bold;
+			}
+			p{
+				font-size: 11px; 
+				color: grey;
+			}
+		}
+
+	}
+}
+}
+/* desktops devices (desktops, 992px and up) */
+@media (min-width: 992px){
+	#pizzaPage{
+	.header-img{	
+		background: url('../img/shutterstock_-1.png') no-repeat;
+		background-size: cover;
+		min-height: 280px;
+	}
+	span i{
+		margin-top: 60px;
+		margin-left: 5px;
+		color: #fff;
+		font-size: 20px;
+	}
+}
+#pizza-capriccios{
+	border-radius:30px 30px 0px 0px;
+	margin-top: -75px;
+	.header-middle{
+		h4{
+			font-weight: bold;
+		}
+		span{
+			font-size: 35px;
+		}
+		.close{
+			margin-top: -20px;
+		}
+		p{
+			font-size: 12px;
+			color: grey;
+		}
+	}
+	.nav-sections{
+		a{
+			width: 100%;
+			background: #eee;
+		}
+	}
+}
+
+#accordion{
+	.card-1{
+		ul{
+			padding-left: 12px;
+		}
+		li{
+			list-style: none; 
+			padding-bottom: 5px;
+			a{
+				font-size: 16px; 
+				font-weight: bold;
+				color: #000;
+				text-decoration: none;
+				i{ 
+					color: #d27906; 
+					font-size: 20px;
+				}
+			}	
+			
+		}
+		.card-body{
+			margin-left: 40px;
+			.r3 span{
+				color: #d27906; 
+				font-weight: bold; 
+				font-size: 14px;
+				margin-left: 175px;
+			}
+			label{
+				font-weight: bold; font-size: 15px;
+			}
+		}
+		a{
+  			text-decoration: none;
+  		}
+		.pizza{
+			h6{
+				font-weight: bold; 
+				font-size: 13px;
+				color: #000;	
+			}
+			span{
+				font-size: 12px;
+				color: #d27906;
+				font-weight: bold;
+			}
+			p{
+				font-size: 11px; 
+				color: grey;
+			}
+		}
+
+	}
+}
+}
+
+/* xta large (desktops, 1200px and up) */
+@media (min-width: 1200px){
+	#pizzaPage{
+	.header-img{	
+		background: url('../img/shutterstock_-1.png') no-repeat;
+		background-size: cover;
+		min-height: 300px;
+	}
+	span i{
+		margin-top: 60px;
+		margin-left: 5px;
+		color: #fff;
+		font-size: 20px;
+	}
+}
+#pizza-capriccios{
+	border-radius:30px 30px 0px 0px;
+	margin-top: -75px;
+	.header-middle{
+		h4{
+			font-weight: bold;
+		}
+		span{
+			font-size: 35px;
+		}
+		.close{
+			margin-top: -20px;
+		}
+		p{
+			font-size: 12px;
+			color: grey;
+		}
+	}
+	.nav-sections{
+		a{
+			width: 100%;
+			background: #eee;
+		}
+	}
+}
+
+#accordion{
+	.card-1{
+		ul{
+			padding-left: 12px;
+		}
+		li{
+			list-style: none; 
+			padding-bottom: 5px;
+			a{
+				font-size: 16px; 
+				font-weight: bold;
+				color: #000;
+				text-decoration: none;
+				i{ 
+					color: #d27906; 
+					font-size: 20px;
+				}
+			}	
+			
+		}
+		.card-body{
+			margin-left: 40px;
+			.r3 span{
+				color: #d27906; 
+				font-weight: bold; 
+				font-size: 14px;
+				margin-left: 175px;
+			}
+			label{
+				font-weight: bold; font-size: 15px;
+			}
+		}
+		a{
+  			text-decoration: none;
+  		}
+		.pizza{
+			h6{
+				font-weight: bold; 
+				font-size: 13px;
+				color: #000;	
+			}
+			span{
+				font-size: 12px;
+				color: #d27906;
+				font-weight: bold;
+			}
+			p{
+				font-size: 11px; 
+				color: grey;
+			}
+		}
+
+	}
+}
+}

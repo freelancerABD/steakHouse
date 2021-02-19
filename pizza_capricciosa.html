@@ -1,0 +1,180 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pizza-cap.css">
+    <title>Food & Drinks Steak House</title>
+  </head>
+  <body id="pizzaCapriccios">
+    
+  <!-- hader strat here-->
+    <header id="pizzaPage" class="p-0 m-0">
+        <div class="header-img">
+          <div class="container">
+            <span><a href="main.html"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a></span>
+          </div>
+        </div>
+    </header>
+
+  <!-- Pizza capriccios section start here-->
+      <section id="pizza-capriccios" class="bg-white py-4">
+        <div class="container">
+          <div class="header-middle ml-1">
+            <a class="close text-dark" href="main.html"><span aria-hidden="true">&times;</span></a>
+            <h4>Pizza Capriccios</h4>
+            <p class="mb-0">Tomates, oregano, fromage, champignons, olives, cheddar, piments, jambon</p>
+          </div>     
+        </div>
+      </section>
+  <!-- Accordion Steak House start here -->
+        <section id="accordion" role="tablist">
+          <div class="card card-1 click" style="border-radius: 0px; border-top: 0px;">
+            <div class="card-header p-0 bg-white" role="tab" style="border-bottom: 0px;">
+                <div data-toggle="collapse" href="#collapse1" aria-expanded="true">
+                  <ul class="">
+                    <li class="ml-2">
+                      <div class="clk"><a href="javascript:void">
+                          <i class="fa fa-caret-right mr-1 mb-0"></i>Pate au choix</a>
+                      <div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            <div id="collapse1" class="collapse" data-parent="#accordion">
+              <div class="card-body p-0">
+                <ul class="m-0">
+                  <li>
+                    <input id="r1" type="radio" name="radio" value="1">
+                    <label for="r1" style="">Fine</label>
+                  </li>
+                  <li>
+                    <input id="r2" type="radio" name="radio" value="2">
+                    <label for="r2" style="">Normal</label>
+                  </li>
+                  <li class="r3">
+                    <input id="r3" type="radio" name="radio" value="3">
+                    <label for="r3">Epaissa</label>
+                    <span style=""><i class="fa fa-plus" style="font-size: 10px;"></i>3.00 €</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  <!-- Entrees Cards -->
+          <div class="card card-1 click" style="border-radius: 0px; border-top: 0px;">
+            <div class="card-header p-0 bg-white" role="tab" style="border-bottom: 0px;">
+                <div data-toggle="collapse" href="#collapse2" aria-expanded="true">
+                  <ul class="">
+                    <li class="ml-2">
+                      <div class="clk"><a href="javascript:void">
+                          <i class="fa fa-caret-right mr-1 mb-0"></i>Accomagnements</a>
+                      <div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+  <!-- Steaks cards --> 
+          <div class="card card-1 click" style="border-radius: 0px; border-top: 0px;">
+            <div class="card-header p-0 bg-white" role="tab" style="border-bottom: 0px;">
+                <div data-toggle="collapse" href="#collapse3" aria-expanded="true">
+                  <ul class="">
+                    <li class="ml-2">
+                      <div class="clk"><a href="javascript:void">
+                          <i class="fa fa-caret-right mr-1 mb-0"></i>Supplements</a>
+                      <div>
+                    </li>
+                  </ul>
+                </div>
+            </div>  
+          </div>
+  <!-- Bugeres Cards -->
+          <div class="card card-1 click" style="border-radius: 0px; border-top: 0px;">
+            <div class="card-header p-0 bg-white" role="tab" style="border-bottom: 0px;">
+                <div data-toggle="collapse" href="#collapse4" aria-expanded="true">
+                  <ul class="">
+                    <li class="ml-2">
+                      <div class="clk"><a href="javascript:void">
+                          <i class="fa fa-caret-right mr-1 mb-0"></i>Boissons</a>
+                      <div>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+      </section>
+
+<!-- Footer start here -->
+  <footer id="footer" class="text-center py-5">
+    <div class="footer-top" style="padding-bottom: 70px;">
+      <div class="container">
+        <div class="d-flex justify-content-center">
+          <a href="#"><i class="fa fa-minus" aria-hidden="true"></i></a>
+          <h4 class="align-self-center px-4" style="font-weight: bold; font-size: 22px;">1</h4>
+          <a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div> 
+    <div class="footer-last fixed-bottom py-2" style="background: #eee;">
+      <div style="background: #449716 !important; border: box-shadow;">
+        <div class="container">
+          <a href="main_article.html" style="text-decoration: none;">
+            <div class="text-center py-3 text-white f1" id="hide">
+              <span style="font-size: 14px; font-weight: bold;">Ajuter au panier<b class="ml-4" style="font-size: 19px;">. 17.00 €</b></span>
+            </div>
+            <div class="text-center py-3 text-white f2 "id="show" style="display: none;">
+              <span style="font-size: 14px; font-weight: bold;">Ajuter au panier<b class="ml-4" style="font-size: 19px;">. 20.00 €</b></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+</footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $('.clk').click(function(){
+          $(this).find('i').toggleClass('fa fa-caret-right fa fa-caret-down')
+        });
+    </script>
+    <script  type="text/javascript">
+      $('#r3').click(function() {
+        $('.f1').hide();
+      });
+      $('#r3').click(function() {
+        $('.f2').show();
+      });
+    </script>
+    <script  type="text/javascript">
+      $('#r1').click(function() {
+        $('.f2').hide();
+      });
+      $('#r1').click(function() {
+        $('.f1').show();
+      });
+    </script>
+    <script type="text/javascript">
+      
+           (function($){
+
+          $(document).ready(function(){
+
+            $('.close').click(function(){
+              
+              $('#pizzaCapriccios').hide();
+              $('main.html').show();
+            });
+          });
+
+            })(jQuery)
+
+     </script>
+</body>
+</html>
